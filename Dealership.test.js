@@ -22,4 +22,16 @@ describe('added methods', () =>{
         actual = dealership.countNumberOfCarsInStock();
         expect(actual).toBe(expected);
     });
+
+    test('can return each car\'s manufacturer', () => {
+        expected = ["Toyota", "Honda", "Ford", "Ford",];
+        actual = dealership.getCarManufacturers();
+        expect(actual).toStrictEqual(expected);
+    });
+
+    test('can return all cars for a given manufacturer', () => {
+        expected = [car3, car4];
+        actual = dealership.getCarsGivenManufacturer("Ford");
+        expect(actual).toBe(expected);
+    });
 })

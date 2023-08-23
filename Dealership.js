@@ -35,11 +35,22 @@ Dealership.prototype.addCarToStock = function(car) {
     this.carsInStock.push(car);
 }
 
-Dealership.prototype.getCarManufacters = function() {
+Dealership.prototype.getCarManufacturers = function() {
     manufacturers = [];
     for(car of this.carsInStock){
-
+        manufacturers.push(car.getManufacturer());
     }
+    return manufacturers;
+}
+
+Dealership.prototype.getCarsGivenManufacturer = function(manufacturer) {
+    carsGivenManufacturer = [];
+    for(car of this.carsInStock){
+        if (car.getManufacturer == manufacturer){
+            cars.push(car);
+    }
+    return carsGivenManufacturer;
+}
 }
 
 
