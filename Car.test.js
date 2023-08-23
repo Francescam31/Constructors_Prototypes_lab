@@ -26,7 +26,22 @@ describe('can get and set properties in Car', () =>{
 
     test('can set car manufacturer', () => {
         expected = "Ford";
-        actual = car.setManufacturer("Ford");
+        car.setManufacturer("Ford");
+        actual = car.getManufacturer();
+        expect(actual).toBe(expected);
+    });
+
+    test('can set car price', () => {
+        expected = 600;
+        car.setPrice(600);
+        actual = car.getPrice();
+        expect(actual).toBe(expected);
+    });
+
+    test('can set car engineType', () => {
+        expected = "Diesel";
+        car.setEngineType("Diesel");
+        actual = car.getEngineType();
         expect(actual).toBe(expected);
     });
 })
