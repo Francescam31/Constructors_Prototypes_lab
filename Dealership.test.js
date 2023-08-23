@@ -3,10 +3,10 @@ const Car = require("./Car")
 
 describe('added methods', () =>{
 
-    car1 = new Car("Toyota", 500, "motor");
-    car2 = new Car("Honda", 600, "motor");
-    car3 = new Car("Ford", 700, "diesel");
-    car4 = new Car("Ford", 800, "diesel");
+    car1 = new Car("Toyota", 5, "motor");
+    car2 = new Car("Honda", 6, "motor");
+    car3 = new Car("Ford", 7, "diesel");
+    car4 = new Car("Ford", 8, "diesel");
     
     dealership = new Dealership("Car Dealership", 100, [car1, car2, car3]);
 
@@ -35,5 +35,9 @@ describe('added methods', () =>{
     //     expect(actual).toBe(expected);
     // });
 
-    
+    test('can return total value of cars in stock', () => {
+        expected = 26;
+        actual = dealership.getTotalValueOfCarsInStock();
+        expect(actual).toStrictEqual(expected);
+    });
 })

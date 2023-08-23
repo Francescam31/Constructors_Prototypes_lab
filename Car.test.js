@@ -4,7 +4,7 @@ const Car = require("./Car")
 
 describe('can get and set properties in Car', () =>{
     
-    car = new Car("Toyota", 500, "motor");
+    car = new Car("Toyota", 5, "motor");
     
     test('can get car manufacturer', () => {
         expected = "Toyota";
@@ -13,7 +13,7 @@ describe('can get and set properties in Car', () =>{
     });
 
     test('can get car price', () => {
-        expected = 500;
+        expected = 5;
         actual = car.getPrice();
         expect(actual).toBe(expected);
     });
@@ -32,8 +32,8 @@ describe('can get and set properties in Car', () =>{
     });
 
     test('can set car price', () => {
-        expected = 600;
-        car.setPrice(600);
+        expected = 6;
+        car.setPrice(6);
         actual = car.getPrice();
         expect(actual).toBe(expected);
     });

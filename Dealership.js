@@ -54,5 +54,15 @@ Dealership.prototype.getCarManufacturers = function() {
 // }
 
 
+Dealership.prototype.getTotalValueOfCarsInStock = function() {
+    totalValue = 0;
+    for(car of this.carsInStock){
+        totalValue += car.getPrice();
+    }
+    return totalValue;
+}
+
+
+
 
 module.exports = Dealership;
