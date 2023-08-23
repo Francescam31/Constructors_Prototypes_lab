@@ -43,15 +43,15 @@ Dealership.prototype.getCarManufacturers = function() {
     return manufacturers;
 }
 
-Dealership.prototype.getCarsGivenManufacturer = function(manufacturer) {
-    carsGivenManufacturer = [];
-    for(car of this.carsInStock){
-        if (car.getManufacturer == manufacturer){
-            cars.push(car);
-    }
-    return carsGivenManufacturer;
-}
-}
+// Dealership.prototype.getCarsGivenManufacturer = function(manufacturer) {
+//     carsGivenManufacturer = [];
+//     for(car of this.carsInStock){
+//         if (car.getManufacturer == manufacturer){
+//             cars.push(car);
+//     }
+//     return carsGivenManufacturer;
+// }
+// }
 
 
 
