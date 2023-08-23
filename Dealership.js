@@ -1,4 +1,4 @@
-const { func } = require("prop-types");
+
 
 const Dealership = function(name, maxNumOfCars, carsInStock) {
     this.name = name;
@@ -21,7 +21,6 @@ Dealership.prototype.getMaxNumOfCars = function() {return this.maxNumOfCars}
 Dealership.prototype.getCarsInStock = function() {return this.carsInStock}
 
 
-module.exports = Dealership;
 
 
 Dealership.prototype.countNumberOfCarsInStock = function() {
@@ -32,3 +31,17 @@ Dealership.prototype.countNumberOfCarsInStock = function() {
     return totalCars;
 }
 
+Dealership.prototype.addCarToStock = function(car) {
+    this.carsInStock.push(car);
+}
+
+Dealership.prototype.getCarManufacters = function() {
+    manufacturers = [];
+    for(car of this.carsInStock){
+
+    }
+}
+
+
+
+module.exports = Dealership;

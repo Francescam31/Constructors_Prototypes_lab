@@ -39,8 +39,8 @@ describe('can get and set properties in Car', () =>{
     });
 
     test('can set car engineType', () => {
-        expected = "Diesel";
-        car.setEngineType("Diesel");
+        expected = "diesel";
+        car.setEngineType("diesel");
         actual = car.getEngineType();
         expect(actual).toBe(expected);
     });
